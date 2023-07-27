@@ -13,7 +13,7 @@ class Kernel: public HODLR_Matrix
 
     Kernel(int N, int dim): HODLR_Matrix(N)
     {
-      // In Toeplitz Matrix, we have entries from t(-N + 1) to t(M - 1)
+      // In Toeplitz Matrix (of size N x dim), we have entries from t(- dim + 1) to t(N - 1)
       x = (Vec::Random(N + dim - 1)).real();
       this->dim = dim;
     }
